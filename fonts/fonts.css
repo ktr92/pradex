@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'AvantGardeGothicCTT';
+    src: url('AvantGardeGothicC-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvantGardeGothicCTT';
+    src: url('AvantGardeGothicC-Demi.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
