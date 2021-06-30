@@ -1035,3 +1035,42 @@ h2.default:after {
   text-transform: uppercase;
   border-bottom: 2px solid #db8d26;
 }
+
+.phone a {
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: right;
+  opacity: 0.95;
+  font-weight: bold;
+}
+.footer__tel {
+	margin-bottom: 15px;
+	text-align: right;
+}
+
+.footer__mail {
+	margin-bottom: 15px;
+	text-align: right;
+}
+
+.footer__address {
+		margin-bottom: 15px;
+		text-align: right;
+}
+
+.footer__info_right {
+	width: 165px;
+	text-align: right;
+}
+
+.footer__socials .socials a svg path {
+	fill: #ededed;
+}
+
+.footer__socials a {
+	opacity: 1;
+}
+
+.footermenu {
+	width: 210px;
+}
