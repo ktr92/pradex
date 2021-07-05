@@ -133,6 +133,27 @@ if (counterTeaserL.length) {
       $('.quantity').on('click', '.quantity-minus', function(e) {
         decrementValue(e);
       });
+
+
+      $('.searchbutton').click(function(e) {
+        $('.headermain__search').slideToggle();
+    });
+
+
+
+       if ($(window).width() > 1023) {
+        $(window).scroll(function() {
+            scroll = $(window).scrollTop();
+
+            if (scroll >= 164) {
+                $('.header').addClass('fixed');
+                $('body').addClass('fixed');
+            } else {
+                $('.header').removeClass('fixed');
+                $('body').removeClass('fixed');
+            }
+        });
+       };
 });
 
 
