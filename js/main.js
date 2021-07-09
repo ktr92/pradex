@@ -139,6 +139,16 @@ if (counterTeaserL.length) {
         $('.headermain__search').slideToggle();
     });
 
+    $('.menubtn-js').click(function(e) {
+        $('.bglayer').toggle();
+        $('.mainmenu').toggle('slide');
+    });
+
+    $('.mainmenu__close').on('click', function() {
+    $('.mainmenu').hide();
+    $('.bglayer').hide();
+  });
+
 
 
        if ($(window).width() > 1023) {
