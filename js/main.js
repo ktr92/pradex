@@ -132,6 +132,12 @@ if (counterTeaserL.length) {
             }
         });
        };
+
+
+       $('.filter__header').on('click', function() {
+          $(this).closest('.filter__item').toggleClass('filter__item_open');
+          $(this).siblings('.filter__form').slideToggle();
+        });
 });
 
 
