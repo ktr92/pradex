@@ -48,8 +48,7 @@ if (counterTeaserL.length) {
       if (currentPosition > elementViewInBottom && firEvent === false) {
         firEvent = true;
         animationCounter1();
-        animationCounter2();
-        animationCounter3();
+     
         
       }   
     });
@@ -57,50 +56,19 @@ if (counterTeaserL.length) {
 
 //counter function will animate by using external js also add seprator "."
  function animationCounter1(){
-         $('#num_1').each(function () {
-          $(this).prop('Counter', 0).animate({
-                  Counter: $(this).data('value')
-              }, {
-              duration: 1200,
-              easing: 'swing',
-              step: function (now) {                      
-                  $(this).text(this.Counter.toFixed(0));
-              }
+         $('.stats__number span').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
             });
-          });
+        });
+
     }
-
-
- function animationCounter2(){
-         $('#num_2').each(function () {
-          $(this).prop('Counter', 0).animate({
-                  Counter: $(this).data('value')
-              }, {
-              duration: 1900,
-              easing: 'swing',
-              step: function (now) {                      
-                  $(this).text(this.Counter.toFixed(0));
-              }
-            });
-          });
-    }
-
-
- function animationCounter3(){
-         $('#num_3').each(function () {
-          $(this).prop('Counter', 0).animate({
-                  Counter: $(this).data('value')
-              }, {
-              duration: 3200,
-              easing: 'swing',
-              step: function (now) {                      
-                  $(this).text(this.Counter.toFixed(0));
-              }
-            });
-          });
-    }
-
-
 
 
 
