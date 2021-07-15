@@ -34,6 +34,27 @@ $(document).ready(function() {
   ]
   });
 
+$('.product-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      asNavFor: '.product-nav'
+    });
+    $('.product-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.product-for',
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      arrow: true,
+      prevArrow: $('.productslider__left'),
+      nextArrow: $('.productslider__right'),
+
+    });
+$("input[type=tel]").mask("+7 (999) 999-99-99");
+
 var counterTeaserL = $('.stats');
 var winHeight = $(window).height();
 if (counterTeaserL.length) {
@@ -126,6 +147,19 @@ if (counterTeaserL.length) {
     $('.filter').slideToggle();
   });
 
+
+
+    (function($) {
+        $(function() {
+
+            $('.producttabs__header ul').on('click', 'li:not(.active)', function() {
+                $(this)
+                    .addClass('active').siblings().removeClass('active')
+                    .closest('div.producttabs').find('div.producttabs__content').removeClass('active').eq($(this).index()).addClass('active');
+            });
+
+        });
+    })(jQuery);
 
 
 
