@@ -91,7 +91,10 @@ if (counterTeaserL.length) {
 
     }
 
-
+lightbox.option({
+      'resizeDuration': 30,
+      'wrapAround': true
+    })
 
 
     function incrementValue(e) {
@@ -188,6 +191,12 @@ if (counterTeaserL.length) {
             }
         });
        };
+
+
+        $('.pageaccordion__title').click(function (event) {
+        $(this).toggleClass('active');
+        $(this).next('.pageaccordion__content').slideToggle();
+    });
 
 
        $('.filter__header').on('click', function() {
