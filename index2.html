@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
+      <link rel="stylesheet" type="text/css" href="/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/fontawesome-free-5.15.3-web/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/fontawesome-free-5.15.3-web/css/brands.css">
     <link rel="stylesheet" type="text/css" href="/libs/fontawesome-free-5.15.3-web/css/solid.css">
     <link rel="stylesheet" type="text/css" href="/css/slick.css">
     <link rel="stylesheet" type="text/css" href="/css/slick-theme.css">
     <link rel="stylesheet" href="/css/animation.css">
+        <link rel="stylesheet" href="/libs/lightbox/css/lightbox.min.css">
+
     <link rel="stylesheet" type="text/css" href="/fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css?v=1.1">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
+    <script src="/js/jquery-1.9.1.js"></script>
+     <script src="/js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -55,7 +61,7 @@
                        <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path fill="#4f4f4e" d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848S326.847,409.323,225.474,409.323z"/></g></g><g><g><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
                       </button>
                     </form>
-                    <div class="searchresult" style="display: none;">
+                    <div class="searchresult" style="display: block;">
                       <div class="searchresult__items">
                         <div class="searchresult__item">
                           <div class="searchcard">
@@ -134,7 +140,7 @@
                     </div>
                     <div class="headercontact__hidden">
                       <div class="headercontact__callback">
-                        <a href="" class="btn_main btn_medium">Заказать звонок</a>
+                        <a href="#modalcallback" data-toggle="modal" class="btn_main btn_medium">Заказать звонок</a>
                       </div>
                       <div class="headercontact__contact"><a href="mailto:info@pradex-moscow.ru">info@pradex-moscow.ru</a></div>
                       <div class="headercontact__contact">МО, Наро-Фоминск. д. Софьино. д. 136/1</div>
@@ -303,10 +309,67 @@
     <footer class="footer" id="footer">
     </footer>
 
-    <script src="/js/jquery-1.9.1.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/maskedinput.js"></script>	
+    <!-- Модальные окно - Заказать звонок -->
+    <div id="modalcallback" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true">
+            <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg">
+              <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+            </svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__content">
+              <div class="modal-title">Заказать звонок</div>
+              <div class="modal__form">
+                <form>
+                  <div class="modal__inputs">
+                    <div class="form-group">
+                      <input type="text" name="" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                      <input type="tel" name="" placeholder="Телефон">
+                    </div>
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" id="checkbox_3"  /> <label for="checkbox_3">Я даю свое согласие на обработку моих <a href="#">персональных данных</a></label>
+                  </div>
+                  <button class="btn_main btn_large" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальные окно - Добавление в корзину  -->
+    <div id="modaladd" class="modal-product modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true">
+            <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg">
+              <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+            </svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__content">
+              <div class="modalproduct">
+                <div class="modalproduct__img"><img src="/images/product2.png" alt=""></div>
+                <div class="modalproduct__name">Радиатор PRADO Universal 30х300х2600 DU</div>
+                <div class="modalproduct__title">Товар добавлен в корзину</div>
+                <div class="modalproduct__links">
+                  <a href="#" class="btn_border btn_border_orange">Продолжить покупки</a>
+                  <a href="#" class="btn_main btn_main_small">Перейти в корзину</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/maskedinput.js"></script>  
     <script src="/js/slick.min.js"></script>
+    <script src="/libs/lightbox/js/lightbox.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <script src="/js/main.js"></script>
   

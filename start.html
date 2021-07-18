@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+ <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
+      <link rel="stylesheet" type="text/css" href="/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/fontawesome-free-5.15.3-web/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/fontawesome-free-5.15.3-web/css/brands.css">
     <link rel="stylesheet" type="text/css" href="/libs/fontawesome-free-5.15.3-web/css/solid.css">
     <link rel="stylesheet" type="text/css" href="/css/slick.css">
     <link rel="stylesheet" type="text/css" href="/css/slick-theme.css">
     <link rel="stylesheet" href="/css/animation.css">
+        <link rel="stylesheet" href="/libs/lightbox/css/lightbox.min.css">
+
     <link rel="stylesheet" type="text/css" href="/fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css?v=1.1">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
+    <script src="/js/jquery-1.9.1.js"></script>
+     <script src="/js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -131,7 +137,7 @@
                     </div>
                     <div class="headercontact__hidden">
                       <div class="headercontact__callback">
-                        <a href="" class="btn_main btn_medium">Заказать звонок</a>
+                        <a href="#modalcallback" data-toggle="modal" class="btn_main btn_medium">Заказать звонок</a>
                       </div>
                       <div class="headercontact__contact"><a href="mailto:info@pradex-moscow.ru">info@pradex-moscow.ru</a></div>
                       <div class="headercontact__contact">МО, Наро-Фоминск. д. Софьино. д. 136/1</div>
@@ -256,8 +262,30 @@
           <ul>
             <li><a href="/index.html" target="_blank">Главная</a></li>
             <li><a href="/index2.html" target="_blank">Поиск</a></li>
+             <li><a href="/catalog.html" target="_blank">Каталог</a></li>
+
             <li><a href="/list.html" target="_blank">Список товаров</a></li>
-            <li><a href="/order.html" target="_blank">Оформление заказа</a></li>
+            <li><a href="/product.html" target="_blank">Карточка товара 1</a></li>
+            <li><a href="/product2.html" target="_blank">Карточка товара 2</a></li>
+              <li><a href="/order.html" target="_blank">Оформление заказа</a></li>
+
+            <li><a href="/modal.html" target="_blank">Модальные окна - Заказать звонок + Добавление в корзину</a></li>
+            <li><a href="/about.html" target="_blank">О компании</a></li>
+            <li><a href="/blago.html" target="_blank">Благотворительность</a></li>
+            <li><a href="/sert.html" target="_blank">Пример сертификатов</a></li>
+            <li><a href="/gallery.html" target="_blank">Галерея проектов</a></li>
+            <li><a href="/gallery-detail.html" target="_blank">Описание проекта</a></li>
+            <li><a href="/komanda.html" target="_blank">Наша команда</a></li>
+            <li><a href="/partners.html" target="_blank">Наши партнеры</a></li>
+            <li><a href="/video.html" target="_blank">Видеоролики</a></li>
+            <li><a href="/proizvodstvo.html" target="_blank">Производство</a></li>
+            <li><a href="/news.html" target="_blank">Новости</a></li>
+            <li><a href="/price.html" target="_blank">Прайс-лист + Отправка прайса</a></li>
+            <li><a href="/contacts.html" target="_blank">Контакты</a></li>
+            <li><a href="/sklad.html" target="_blank">Склад и логистика</a></li>
+            <li><a href="/tp.html" target="_blank">Техподдержка</a></li>
+      
+            
           </ul>
         </div>
       </div>
@@ -361,10 +389,67 @@
       </div>
     </footer>
 
-    <script src="/js/jquery-1.9.1.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <!-- Модальные окно - Заказать звонок -->
+    <div id="modalcallback" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true">
+            <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg">
+              <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+            </svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__content">
+              <div class="modal-title">Заказать звонок</div>
+              <div class="modal__form">
+                <form>
+                  <div class="modal__inputs">
+                    <div class="form-group">
+                      <input type="text" name="" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                      <input type="tel" name="" placeholder="Телефон">
+                    </div>
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" id="checkbox_3"  /> <label for="checkbox_3">Я даю свое согласие на обработку моих <a href="#">персональных данных</a></label>
+                  </div>
+                  <button class="btn_main btn_large" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальные окно - Добавление в корзину  -->
+    <div id="modaladd" class="modal-product modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true">
+            <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg">
+              <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+            </svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__content">
+              <div class="modalproduct">
+                <div class="modalproduct__img"><img src="/images/product2.png" alt=""></div>
+                <div class="modalproduct__name">Радиатор PRADO Universal 30х300х2600 DU</div>
+                <div class="modalproduct__title">Товар добавлен в корзину</div>
+                <div class="modalproduct__links">
+                  <a href="#" class="btn_border btn_border_orange">Продолжить покупки</a>
+                  <a href="#" class="btn_main btn_main_small">Перейти в корзину</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="/js/maskedinput.js"></script>  
     <script src="/js/slick.min.js"></script>
+    <script src="/libs/lightbox/js/lightbox.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <script src="/js/main.js"></script>
   
