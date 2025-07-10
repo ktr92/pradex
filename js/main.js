@@ -1,5 +1,64 @@
 $(document).ready(function () {
+$(".mainslider-for").on("init", function (event, slick) {
+      $(".mainslider__slide.slick-current").addClass("hideBg")
+      $(".mainslider__slide .mainblock__svg").removeClass("fade-out")
+      $(".mainslider__slide .mainblock__img img").removeClass("fade-in")
+      $(".mainslider__slide .mainblock__img").find("svg").attr("class", "")
+      $(".mainslider__slide.slick-current .mainblock__img")
+        .find("svg")
+        .attr("class", "path")
+      setTimeout(function () {
+        $(".mainslider__slide.slick-current .mainblock__svg").addClass(
+          "fade-out"
+        )
+        $(".mainslider__slide.slick-current .mainblock__img img").addClass(
+          "fade-in"
+        )
+      }, 3000)
+  })
 
+  $(".mainslider-for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    arrows: false,
+    fade: true,
+    dots: false,
+    asNavFor: ".mainslider-nav",
+  })
+
+  $(".mainslider-nav").slick({
+    infinite: false,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    asNavFor: ".mainslider-for",
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    variableWidth: true,
+  })
+
+  $(".mainslider-for").on(
+    "afterChange",
+    function (event, slick, currentSlide, nextSlide) {
+      $(".mainslider__slide.slick-current").addClass("hideBg")
+      $(".mainslider__slide .mainblock__svg").removeClass("fade-out")
+      $(".mainslider__slide .mainblock__img img").removeClass("fade-in")
+      $(".mainslider__slide .mainblock__img").find("svg").attr("class", "")
+      $(".mainslider__slide.slick-current .mainblock__img")
+        .find("svg")
+        .attr("class", "path")
+      setTimeout(function () {
+        $(".mainslider__slide.slick-current .mainblock__svg").addClass(
+          "fade-out"
+        )
+        $(".mainslider__slide.slick-current .mainblock__img img").addClass(
+          "fade-in"
+        )
+      }, 3000)
+    }
+  )
   $(".productslider__slider").slick({
     infinite: true,
     slidesToShow: 4,
